@@ -15,11 +15,11 @@
 # make_sound(sparrow)
 
 #4
-class Book:
-    def __init__(self,title,author,copies):
-        self.title=title
-        self.author=author
-        self.copies=copies
-    def display_info(self):
-        print(f"TITLE:{self.title}\nAUTHOR:{self.author}\nCOPIES AVAILABLE:{self.copies}")
+# class Book:
+#     def __init__(self,title,author,copies):
+#         self.title=title
+#         self.author=author
+#         self.copies=copies
+#     def display_info(self):
+#         print(f"TITLE:{self.title}\nAUTHOR:{self.author}\nCOPIES AVAILABLE:{self.copies}")
     
