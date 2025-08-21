@@ -40,24 +40,45 @@
 #     print("book not found")
 
 #5
-class Employee:
-    def __init__(self,name,position,salary):
-       self.name=name
-       self.position=position
-       self.salary=salary
-    def apply_bonus(self,bonus_percentage):
-        self.salary=self.salary+((self.salary*bonus_percentage)/100)
-    def display_info(self):
-        print(f"NAME: {self.name}\nPOSITION:{self.position}\nCURRENT SALARY:{self.salary}")
-employees=[]
-for i in range(2):
-    name=input(f"name of employee {i+1}:")
-    position=input(f"enter the position:")
-    salary=float(input("enter the salary:"))
-    empl=Employee(name,position,salary)
-    employees.append(empl)
-for empl in employees:
-    percentage=float(input(f"enter bonus percentage for {empl.name}"))
-    empl.apply_bonus(percentage)
-    empl.display_info()
-    
+# class Employee:
+#     def __init__(self,name,position,salary):
+#        self.name=name
+#        self.position=position
+#        self.salary=salary
+#     def apply_bonus(self,bonus_percentage):
+#         self.salary=self.salary+((self.salary*bonus_percentage)/100)
+#     def display_info(self):
+#         print(f"NAME: {self.name}\nPOSITION:{self.position}\nCURRENT SALARY:{self.salary}")
+# employees=[]
+# for i in range(2):
+#     name=input(f"name of employee {i+1}:")
+#     position=input(f"enter the position:")
+#     salary=float(input("enter the salary:"))
+#     empl=Employee(name,position,salary)
+#     employees.append(empl)
+# for empl in employees:
+#     percentage=float(input(f"enter bonus percentage for {empl.name}"))
+#     empl.apply_bonus(percentage)
+#     empl.display_info()
+
+class Product:
+    def __init__(self,name,price):
+        self.name=name
+        self.price=price
+class Cart:
+    products=[]
+    def add_product(self,product):
+        self.products.append(product)
+    def total_price(self):
+        return(sum(product.price for product in self.products))
+cart=Cart()
+for i in range(3):
+    name=input("enter product name: ")
+    price=float(input("enter the price: "))
+    product=Product(name,price)
+    cart.add_product(product)
+print(f"total price: Rs{cart.total_price()}")
+
+            
+
+
